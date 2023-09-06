@@ -8,11 +8,12 @@
     "noEmit": true,
     "esModuleInterop": true,
     "module": "esnext",
-    "moduleResolution": "bundler",
+    "moduleResolution": "NodeNext", //used for Node.js versions that support ES modules natively
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
+    "forceConsistentCasingInFileNames": true, //enforces a consistent use of file names when referring to the same file
     "plugins": [
       {
         "name": "next"
