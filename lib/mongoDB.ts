@@ -1,3 +1,5 @@
+//creating and managing a connection to a MongoDB database using the MongoDB Node.js driver.
+//designed to ensure that you have a single, shared connection to the database.
 import { MongoClient } from "mongodb";
 
 if (!process.env.MONGODB_URI) {
