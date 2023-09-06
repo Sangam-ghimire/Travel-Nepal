@@ -122,6 +122,7 @@ export default function ViewPost({
           </button>
 
           <button
+            title="Comment"
             className={`${postStyles.icons} ${postStyles.comment}`}
             // size={28}
             onClick={handleComment}
