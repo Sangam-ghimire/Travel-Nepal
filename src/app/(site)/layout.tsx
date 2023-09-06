@@ -1,6 +1,6 @@
 "use client"
 import NavBar from "./components/NavBar/NavBar";
-import Fbar from "./components/FollowedBar/Fbar";
+import Fbar from "../(site)/components/FollowedBar/Fbar";
 import React, { useEffect, useState, createContext } from "react";
 import { SessionContextValue, useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
