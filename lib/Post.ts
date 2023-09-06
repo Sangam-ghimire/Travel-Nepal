@@ -5,22 +5,22 @@ interface IComment {
   content: string;
   owner: string;
   registeredTime: mongoose.Schema.Types.Date;
-}
+} //interface for comment
 interface Ilocation {
   id: Schema.Types.ObjectId;
   address: string;
-}
+} //interface for location
 interface IOwner {
   email: string;
   name: string;
-}
+} //interface for owner
 
 interface IRating{
   TrailCondition: number;
   Weather: number;
   Accessibility: number;
   overallScore: number;
-}
+} //interface for rating
 
 interface IPost {
   description: string;
@@ -32,10 +32,10 @@ interface IPost {
   owner: IOwner;
   rating: IRating;
   registeredTime: mongoose.Schema.Types.Date;
-}
+} //interface for post
 
 
-
+//the below code is for the comment schema, it is nested in the post schema
 const commentSchema = new Schema<IComment>({
   id: {
     type: Schema.Types.ObjectId,
@@ -56,6 +56,7 @@ const commentSchema = new Schema<IComment>({
   }
 });
 
+//the below code is for the post schema, it is the main schema
 const postSchema = new Schema<IPost>({
   description: {
     type: String,
@@ -117,5 +118,6 @@ const postSchema = new Schema<IPost>({
 
 });
 
+//the below code is for the post model
 const Post = mongoose.models.Post || mongoose.model("Post", postSchema);
-export default Post;
+export default Post; //exporting the post model
