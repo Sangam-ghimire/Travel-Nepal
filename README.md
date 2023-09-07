@@ -77,7 +77,7 @@ Travel-Nepal offers the following fundamental features:
 5. Access the application through your web browser and start exploring Nepal's hidden gems.
 
 ## System Flow
-![System Flow]()
+![System Flow](https://github.com/Sangam-ghimire/Travel-Nepal/blob/main/public/systemdiagram-1.png)
 
 ## Sign Up Flow
 ![Sign Up Flow]()
@@ -91,25 +91,16 @@ Travel-Nepal offers the following fundamental features:
 ## Some ScreenShots.
 
 # Login Page
-![Login Page]()
+![Login Page](https://github.com/Sangam-ghimire/Travel-Nepal/blob/main/public/login.png)
 
 # Sign Up Page
-![SignUp Page]()
+![SignUp Page](https://github.com/Sangam-ghimire/Travel-Nepal/blob/main/public/signup.png)
 
 # Home Feed Page
-![Home Feed Page]()
+![Home Feed Page](https://github.com/Sangam-ghimire/Travel-Nepal/blob/main/public/Home%20Feed%20Page.png)
 
 # Feeds in Location Page
-![Feeds in Location Page]()
-
-# Adding Location
-![Adding Location]()
-
-# Adding New Posts in Location Page
-![Adding New Posts in Location Page]()
-
-# Auto Complete in Search Bar
-![Auto Complete in Search Bar]()
+![Feeds in Location Page](https://github.com/Sangam-ghimire/Travel-Nepal/blob/main/public/Feed%20in%20Location%20page.png)
 
 ## Future Enhancements
 1. Deploying the website in custom domain and developing CI/CD pipelines.
