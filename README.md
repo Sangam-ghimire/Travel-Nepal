@@ -80,13 +80,13 @@ Travel-Nepal offers the following fundamental features:
 ![System Flow](https://github.com/Sangam-ghimire/Travel-Nepal/blob/main/public/systemdiagram-1.png)
 
 ## Sign Up Flow
-![Sign Up Flow]()
+![Sign Up Flow](https://github.com/Sangam-ghimire/Travel-Nepal/blob/main/public/Signup%20flow.png)
 
 ## Login Flow
-![Login Flow]()
+![Login Flow](https://github.com/Sangam-ghimire/Travel-Nepal/blob/main/public/Login%20Flow.png)
 
 ## Schema Of DB
-![Schema Of DB]()
+![Schema Of DB](https://github.com/Sangam-ghimire/Travel-Nepal/blob/main/public/Relational%20schema.png)
 
 ## Some ScreenShots.
 
