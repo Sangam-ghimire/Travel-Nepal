@@ -4,7 +4,7 @@ import { useRef, useState, useEffect } from "react";
 import InfiniteScroll from "react-infinite-scroll-component";
 import Loading from "../LoadingPost/LoadingPost";
 
-const LINK_TO_DATABASE
+
 interface Post {
     _id: string;
     address: string;
