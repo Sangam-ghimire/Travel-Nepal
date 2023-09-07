@@ -4,7 +4,7 @@ import { useRef, useState, useEffect } from "react";
 import InfiniteScroll from "react-infinite-scroll-component";
 import Loading from "../LoadingPost/LoadingPost";
 
-
+const LINK_TO_DATABASE
 interface Post {
     _id: string;
     address: string;
@@ -32,7 +32,7 @@ async function fetchLocationPosts(
     const res: Response = await fetch(
       `https://ap-south-1.aws.data.mongodb-api.com/app/trek-diaries-bmymy/endpoint/getPostFeed?email=${ encodedEmail }&page=${ encodedPage }&searchTime=${ encodedSearchTime }`,
       { cache: "no-store" }
-    );
+    ); //this is a sample link to the database, this doesn't work now, limit reached
 
     if (!res.ok) return undefined
 

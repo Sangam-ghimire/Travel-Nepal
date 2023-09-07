@@ -208,7 +208,7 @@ function useDisableSignUp(
         setDisable(false);
       }
     }
-  }, [firstName, lastName, email, password, confirmPassword, error]);
+  }, [firstName, lastName, email, password, confirmPassword,error]);
 
   return disable;
 }
