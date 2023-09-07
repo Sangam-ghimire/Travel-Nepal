@@ -32,7 +32,7 @@ async function fetchLocationPosts(
     const res: Response = await fetch(
       `https://ap-south-1.aws.data.mongodb-api.com/app/trek-diaries-bmymy/endpoint/getPostFeed?email=${ encodedEmail }&page=${ encodedPage }&searchTime=${ encodedSearchTime }`,
       { cache: "no-store" }
-    ); //this is a sample link to the database, this doesn't work now, limit reached
+    ); //this is a sample link to the database, this doesn't work now, limit reachedgit
 
     if (!res.ok) return undefined
 
