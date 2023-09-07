@@ -1,34 +1,126 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Travel-Nepal: Explore Hidden Gems of Nepal
 
-## Getting Started
+Travel-Nepal is a social media application dedicated to promoting the natural beauty and hidden gems of Nepal. Our mission is to connect outdoor enthusiasts, provide valuable trekking information, and inspire travelers to explore the stunning landscapes of Nepal.
 
-First, run the development server:
+## Project Objectives:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+Travel-Nepal is designed with several key objectives in mind:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+1. **Share Trekking Experiences:** Our platform allows users to share their trekking experiences, providing insights into the suitability of specific trekking locations at different times.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+2. **Promote Natural Beauty:** We aim to showcase the breathtaking natural beauty of Nepal's lesser-known places, encouraging travelers to explore these hidden gems.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+3. **Connect Enthusiasts:** Travel-Nepal provides a dedicated space for trek and hike enthusiasts to connect with one another, exchange tips, and plan adventures together.
 
-## Learn More
+4. **Effective Trip Planning:** We assist travelers in planning their trips effectively, ensuring they make the most of their trekking and hiking experiences in Nepal.
 
-To learn more about Next.js, take a look at the following resources:
+5. **Resurrecting The Tourism Economy:** We are trying to resurrect the tourism economy and providing employment here are Nepal, that has been devasted post Covid-19.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Features:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Travel-Nepal offers the following fundamental features:
 
-## Deploy on Vercel
+1. **User Authentication:** Users can create accounts and log in, with the option to use Google for a hassle-free sign-in experience.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+2. **Location Search:** Easily search for your desired trekking locations within Nepal.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+3. **Location Management:** Users can add the locations they have visited, providing details such as address, state, country, and a description.
+
+4. **Explore Locations:** Find posts shared by other users about specific trekking locations, helping you gain insights into those places.
+
+5. **Location Interaction:** Follow or unfollow locations, add posts, and engage with the community by liking and commenting on posts related to a specific location.
+
+6. **Personalized Dashboard:** Your followed locations are conveniently displayed on the left side of the page, ensuring you can keep track of your favorite destinations.
+
+7. **Create Posts:** Share your trekking memories by uploading images along with descriptions through the "add post" feature.
+
+8. **View Posts:** Once you create a post, it will be showcased on the "view posts" page for others to admire and be inspired by your adventures.
+
+
+### Learnings
+
+1. **Social Media Platform Development:** Building Travel-Nepal provided valuable experience in developing a social media platform from scratch. Understanding the intricacies of user profiles, posts, comments, and interactions was a significant learning curve.
+
+2. **User-Generated Content Management:** Managing user-generated content, including posts, comments, and user profiles, taught the importance of data validation, security, and moderation to ensure a positive user experience.
+
+3. **Community Building:** Creating a platform that fosters a sense of community among trek and hike enthusiasts involved learning how to design features that encourage user engagement and interaction.
+
+4. **Geolocation and Mapping Integration:** Incorporating location-based features, such as searching for trekking locations and adding new places, required understanding geolocation and mapping technologies.
+
+5. **Up-to-Date Information:** Providing real-time information on the suitability of trekking locations was a complex task that taught the importance of data accuracy, retrieval, and presentation.
+
+6. **Server-Side Rendering (SSR) and Client-Side Rendering(CSR) with Next.js:** Using Next.js allowed us to explore server-side rendering and client-side rendering, which significantly improved the performance and SEO of the application. Understanding SSR and CSR were crucial for delivering a fast and SEO-friendly website.
+
+7. **Database Management with MongoDB:** Working with MongoDB as the database helped dive deep into NoSQL databases and their benefits for storing user data, posts, and location information.
+
+8. **Backend Development:** Developing the backend using Node.js involved creating RESTful APIs, handling user authentication, and managing data retrieval and storage. It enhanced our understanding of backend development.
+
+9. **User Authentication and Authorization:** Implementing user authentication securely, including features like Google sign-in, helped grasp the importance of protecting user data and managing user sessions.
+
+10. **Project Planning and Prioritization:** Assembling and executing a project of this scale required effective project planning, task prioritization, and time management skills.
+
+## Technologies Used:
+1. Programming Language: TypeScript, JavaScript
+2. Tech Stack: Node.js, Next.js, MongoDB
+3. Deployment: Will be deployed in vercel, currently looking for Domain and learning to setup CI/CD pipelines
+
+## Getting Started:
+
+1. Clone the repository to your local machine.
+
+2. Install the necessary dependencies using `npm install`.
+
+3. Configure your database settings and authentication methods(also the link of mongoDb is expired make sure to add your custom lin).
+
+4. Run the application using `npm run dev`.
+
+5. Access the application through your web browser and start exploring Nepal's hidden gems.
+
+## System Flow
+![System Flow]()
+
+## Sign Up Flow
+![Sign Up Flow]()
+
+## Login Flow
+![Login Flow]()
+
+## Schema Of DB
+![Schema Of DB]()
+
+## Some ScreenShots.
+
+# Login Page
+![Login Page]()
+
+# Sign Up Page
+![SignUp Page]()
+
+# Home Feed Page
+![Home Feed Page]()
+
+# Feeds in Location Page
+![Feeds in Location Page]()
+
+# Adding Location
+![Adding Location]()
+
+# Adding New Posts in Location Page
+![Adding New Posts in Location Page]()
+
+# Auto Complete in Search Bar
+![Auto Complete in Search Bar]()
+
+## Future Enhancements
+1. Deploying the website in custom domain and developing CI/CD pipelines.
+2. Writing Test code using Jest and other feasible packages.
+3. Introducing threading in post and comments.
+4. A real time chat feature for communication.
+5. Introducing weather updates for real-time weather conditions.
+6. Introducing contact list for hotels, motels, homestays or lodge for ease in travel planning.
+
+## Join Us in Exploring Nepal's Beauty:
+
+Travel-Nepal invites you to become a part of our community of outdoor enthusiasts, explorers, and adventurers. Share your experiences, discover new trekking locations, and connect with like-minded individuals who share your passion for the great outdoors. Let's embark on unforgettable journeys together!
+
+**Happy Exploring!** 🌄🏞️
