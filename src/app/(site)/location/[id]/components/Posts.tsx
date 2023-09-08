@@ -4,7 +4,7 @@ import ViewPost from "../../../components/viewPost/viewPost"
 import { useRef, useState, useEffect } from "react";
 import InfiniteScroll from "react-infinite-scroll-component";
 
-
+//this is the interface for the post
 interface Post {
     _id: string;
     address: string;
@@ -19,8 +19,10 @@ interface Post {
     }
   }
 
+//this is the number of posts per scroll
 const POSTS_PER_SCROLL = 7;
 
+//this is the function for fetching the location posts
 async function fetchLocationPosts(
     locationId: string,
     page: number,
@@ -36,6 +38,7 @@ async function fetchLocationPosts(
     return res.json();
   }
 
+//this is the function for rendering the post feed
 export default function Posts({ locationId }:{ locationId: string }) {
     const [posts, fetchPosts, hasMore, didMount] = useFetchPosts(locationId);
 
@@ -79,6 +82,7 @@ export default function Posts({ locationId }:{ locationId: string }) {
     
 }
 
+//this is the function for fetching the posts
 function useFetchPosts( locationId: string ):[
     posts: Array<Post>,
     fetchPost: Function,
@@ -137,7 +141,7 @@ function useFetchPosts( locationId: string ):[
             }
           }
         }, [])
-    return  [posts, fetchPosts, hasMore, didMount];
+    return  [posts, fetchPosts, hasMore, didMount]; //this is the function for fetching the posts
     };
   
   

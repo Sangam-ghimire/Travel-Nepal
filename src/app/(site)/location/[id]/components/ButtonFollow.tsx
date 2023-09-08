@@ -6,6 +6,7 @@ import locateStyle from "../page.module.css"
 import { useContext, useEffect, useState } from "react"
 import { FLocationContext, ReloadFLocationContext } from "@/app/(site)/layout";
 
+//this is the component for the follow button
 export default function ButtonFollow({ locationID }: { locationID: string}) {
     const router = useRouter();
     const reloadLocations = useContext(ReloadFLocationContext)

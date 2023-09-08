@@ -7,6 +7,7 @@ import { useSession } from "next-auth/react";
 import { useState } from "react";
 import Star from "../../post/[id]/component/star";
 
+
 interface Owner {
   name: string;
 }
@@ -57,6 +58,7 @@ export default function ViewPost({
     const encodedEmail = encodeURI(email);
     const eoncodedPostId = encodeURI(id);
     try {
+      //here we are sending the post id and the email to the backend to like the post
       const res: Response = await fetch(
         `https://ap-south-1.aws.data.mongodb-api.com/app/trek-diaries-bmymy/endpoint/likePost?postId=${eoncodedPostId}&email=${encodedEmail}`,
         {

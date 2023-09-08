@@ -1,5 +1,6 @@
 import React from "react";
 
+//this is the component for the profile picture
 function ProfilePicture({ userFirst }: { userFirst: string }) {
   return (
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 482.99 441.37">

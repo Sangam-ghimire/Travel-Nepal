@@ -4,6 +4,7 @@ import modalStyles from "./page.module.css";
 import axios from "axios";
 import { useRouter } from "next/navigation";
 
+//this is the component for the add location modal
 export default function AddLocation() {
   const [show, setShow] = useState(false);
   const [address, setAddress] = useState("");
@@ -17,6 +18,7 @@ export default function AddLocation() {
     setShow((prev) => !prev);
   };
 
+  //here we are handling the add location process
   const handleAddLocation = async (e: React.MouseEvent) => {
     e.preventDefault();
     try {
@@ -36,6 +38,7 @@ export default function AddLocation() {
     }
   };
 
+  //here we are rendering the add location modal
   return (
     <>
       <button onClick={toggleModal} className={modalStyles.btn}>
@@ -107,6 +110,7 @@ export default function AddLocation() {
   );
 }
 
+//here we are disabling the add location button if the user has not entered the required details
 function useDisable(
   address: string,
   state: string,

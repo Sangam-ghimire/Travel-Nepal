@@ -5,12 +5,13 @@ import { HiLocationMarker } from "react-icons/hi";
 import { IoInformationCircle } from "react-icons/io5";
 import { useRouter } from "next/navigation";
 
+//this is the component for the location result
 export default function ResultLocation({ id, address, description }: {
   id: string,
   address: string,
   description: string
 }) {
-  const router = useRouter()
+  const router = useRouter();  //here we are using the router
 
   const handleClick = () => {
     router.push(`/location/${id}`)

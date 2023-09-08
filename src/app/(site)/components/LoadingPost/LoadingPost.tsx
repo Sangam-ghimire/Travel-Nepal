@@ -1,6 +1,7 @@
 import React from "react";
 import "./LoadingPost.css";
 
+//this is the component for the loading post
 const LoadingPost = () => {
   return (
     <div className="wrapper skeleton">

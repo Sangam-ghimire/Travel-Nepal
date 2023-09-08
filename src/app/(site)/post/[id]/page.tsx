@@ -4,6 +4,7 @@ import Comment from "./component/comment_sec/Comment";
 import Post from "./component/postLayout";
 import { notFound } from "next/navigation";
 
+//this is the component for the post page
 async function fetchPostData(id: string) {
   const res: Response = await fetch(
     `https://ap-south-1.aws.data.mongodb-api.com/app/trek-diaries-bmymy/endpoint/getaPost?postId=${id}`,
@@ -13,6 +14,7 @@ async function fetchPostData(id: string) {
   return res.json();
 }
 
+//this is the function for rendering the post page
 export default async function PostPage({ params }: { params: { id: string } }) {
   const postID: string = params.id;
   const data = await fetchPostData(postID);

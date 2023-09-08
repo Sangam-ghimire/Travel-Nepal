@@ -23,6 +23,7 @@ const RatingDropdown: React.FC<RatingDropdownProps> = ({onRatingSelect}) => {
     { value: 5, label: '★★★★★ (Excellent)' },
   ];
 
+  // Handle Rating Change
   const handleRatingChange = (selectedOption: RatingOption | null) => {
     setSelectedRating(selectedOption);
     const rating = selectedOption ? (selectedOption as RatingOption).value : null;

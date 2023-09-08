@@ -4,6 +4,7 @@ import { useSession } from "next-auth/react";
 import mainStyles from "./page.module.css";
 import PostFeed from "./components/PostFeed/PostFeed";
 
+//this is the home page
 export default function Home() {
   const router = useRouter();
   const session = useSession({

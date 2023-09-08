@@ -16,7 +16,7 @@ export default function UserVerifyPage() {
 
 //here we are verifying the user and sending the user to the login page
 function VerifyMail() {
-    const router: any = useRouter()
+    const router: any = useRouter();
     const pathname: any = usePathname();
     let split_id = pathname.split('/');
     const required_id: any = split_id[2];

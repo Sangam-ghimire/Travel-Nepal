@@ -5,6 +5,7 @@ import Posts from "./components/Posts";
 import {TbLocationFilled }from "react-icons/tb"
 import { notFound } from "next/navigation";
 
+//this is the function to fetch the location data
 async function fetchLocationData(id: string) {
   const res: Response = await fetch(
     `https://ap-south-1.aws.data.mongodb-api.com/app/trek-diaries-bmymy/endpoint/fetchLocaitonData?id=${id}`,
@@ -16,6 +17,7 @@ async function fetchLocationData(id: string) {
   return res.json();
 }
 
+//this is the function for rendering the location page
 export default async function LocationPage({
   params,
 }: {

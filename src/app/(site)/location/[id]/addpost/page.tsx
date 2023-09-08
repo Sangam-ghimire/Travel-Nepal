@@ -8,10 +8,12 @@ import locationStyle from "../addpost/page.module.css";
 import {  BiImageAdd } from "react-icons/bi";
 import RatingDropdown from "../addpost/components/ratingDropdown"; 
 
+//this is the component for the add post page
 export default function Addpost({ params }: { params: { id: string } }) {
   const router = useRouter();
   const locationId: string = params.id;
 
+  //here we are checking if the user is authenticated or not
   const session = useSession({
     required: true,
     onUnauthenticated() {
@@ -28,11 +30,13 @@ export default function Addpost({ params }: { params: { id: string } }) {
   const [uploadData, setUploadData] = useState();
   const [image_URL, setImageUrl] = useState("");
 
+  //here we are handling the image upload
   const handleTrailConditon = (rating: number | null) => {
     console.log("TrailCondition:", rating);
     setTrialCondition(rating);
   };
 
+  //here we are handling the weather rating
   const handleWeather = (rating: number | null) => {
     console.log("Weather:", rating);
     setWeather(rating);
@@ -52,6 +56,7 @@ export default function Addpost({ params }: { params: { id: string } }) {
     reader.readAsDataURL(changeEvent.target.files![0]);
   };
   
+  //here we are handling the submit event that is triggered when the user clicks on the create post button
   async function handleSubmit(event: React.FormEvent<HTMLFormElement>): Promise<void> {
     event.preventDefault();
     
