@@ -15,7 +15,8 @@ export default function ResetPassword() {
     e.preventDefault(); // Prevent form submission
     console.log(email);
     try {
-      const { data } = await axios.post("/api/forgot_password", {
+      const { data } = await axios.post("/api/forgot_password",
+      {
         email
       });
 
@@ -51,6 +52,7 @@ export default function ResetPassword() {
         />
         <button type="submit" className={forgetStyles.resetbtn}>Reset Password
         </button>
+        // Link to redirect to login page
         <Link className={forgetStyles.linkforget} href="/login">
           Back to sign in
         </Link>
