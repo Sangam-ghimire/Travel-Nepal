@@ -9,22 +9,23 @@ import User from "../../../../lib/modals/User"
 if (!process.env.NEXTAUTH_SECRET) {
     throw new Error('Please provide process.env.NEXTAUTH_SECRET env variable.')
 }
-
+//authOptions uses dynamic pages in next js to redirect to login page dynamically
 export const authOptions: NextAuthOptions = {
-    adapter: MongoDBAdapter(clientPromise),
+    adapter: MongoDBAdapter(clientPromise), //using mongodb as the database
     providers: [
         GoogleProvider({
             clientId: process.env.GOOGLE_CLIENT_ID as string,
             clientSecret: process.env.GOOGLE_CLIENT_SECRET as string,
             
-          }),
+          }), //google provider that we are using for authentication
         CredentialsProvider({
             name: "Credentials",
             credentials: {
                 email: { label: 'email', type: 'text' },
                 password: { label: 'password', type: 'password'}
                 
-            },
+            }, //credentials that we are using for authentication
+            //function to authorize the user
             async authorize(credentials) {
                 try {
                     console.log("Connecting to database...")
@@ -53,19 +54,22 @@ export const authOptions: NextAuthOptions = {
                    }
 
                     console.log(`returning user details: ${result}`) // result is MongoDB Object here.. might need to change into js object later...
-                    return result;
+                    return result; // returning the user details based on the email and password
                 } catch {
-                    return null
+                    return null;
                 }
             }
         })
     ],
+    //here we are defining the pages that we want to redirect to
     pages: {
         signIn: "/login"
     },
+    //here we are defining the session
     session: {
         strategy: 'jwt'
     },
+    //here we are defining the secret
     secret: process.env.NEXTAUTH_SECRET,
     callbacks: {
         async session({ token, session }) {
@@ -74,7 +78,7 @@ export const authOptions: NextAuthOptions = {
             session.user.name = token.name
             session.user.email = token.email
           }
-    
+          // Add property to session, like an access_token from a provider.
           return session
         },
         async jwt({ token, user }) {
