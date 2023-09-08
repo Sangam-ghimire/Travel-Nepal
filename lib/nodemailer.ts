@@ -1,9 +1,10 @@
 import { url } from "inspector";
-import nodemailer, { TransportOptions } from "nodemailer";
+import nodemailer, { TransportOptions } from "nodemailer"; //
 
 //here we are configuring our SMTP Server details.
 const sendEmail = async (email: string, subject: string, link: string) => {
   try {
+    //here we are configuring our SMTP Server details.
     const transporter = nodemailer.createTransport({
       host: process.env.HOST,
       port: process.env.EMAIL_PORT,
@@ -14,6 +15,7 @@ const sendEmail = async (email: string, subject: string, link: string) => {
       },
     } as TransportOptions);
 
+    //here we are creating the email content which we will send to the user
     const emailContent = `
   <html>
     <head>
@@ -73,7 +75,8 @@ const sendEmail = async (email: string, subject: string, link: string) => {
     </body>
   </html>
 `;
-
+    //here we are sending the email, to the user
+    //success is a boolean variable which will tell us whether the email is sent or not
     let success = await transporter.sendMail({
       from: process.env.USER,
       to: email,
@@ -89,4 +92,5 @@ const sendEmail = async (email: string, subject: string, link: string) => {
   }
 };
 
+//here we are exporting the sendEmail function
 export default sendEmail;
