@@ -1,4 +1,4 @@
-import mongoose, { Schema } from "mongoose";
+import mongoose, { Schema } from "mongoose"; //importing mongoose and schema from mongoose
 interface IToken {
     token: string;
     createdAt: Date;
