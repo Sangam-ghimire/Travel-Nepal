@@ -4,29 +4,30 @@ import { getToken } from "next-auth/jwt"
 import { getAuthSecret } from "../lib/secrets"
 
 // const authSecret: string = process.env.AUTH_SECRET
-const authSecret: string = getAuthSecret()
+const authSecret: string = getAuthSecret();
 
 //here we are dealing with the withAuth middleware to protect the routes
 export default withAuth(
   async function middleware(req: NextRequest) {
-    console.log('using middleware...')
+    console.log('using middleware...');
     const token = await getToken({ req, secret: authSecret })
-    console.log("Auth Token: ", token)
-    const isAuth = !!token
-    const isAuthPage = req.nextUrl.pathname.startsWith('/login') || req.nextUrl.pathname.startsWith('/sign_up')
+    console.log("Auth Token: ", token);
+    const isAuth = !!token;
+    const isAuthPage = req.nextUrl.pathname.startsWith('/login') || req.nextUrl.pathname.startsWith('/sign_up');
+    // If authenticated, return response
     if(isAuthPage){
       if (isAuth){
         return NextResponse.rewrite(new URL('/', req.url))
       }
       return null
     }
-
+    // If no token, redirect to login page
     if (!isAuth) {
       let from = req.nextUrl.pathname
       if (req.nextUrl.search) {
         from += req.nextUrl.search;
       }
-
+      //returning the redirect response
       return NextResponse.redirect(
         new URL(`/login?from=${encodeURIComponent(from)}`, req.url)
       );
