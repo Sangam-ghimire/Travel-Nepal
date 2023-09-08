@@ -2,6 +2,7 @@
 "use client"
 import Image from 'next/image';
 
+//here the function is exported and this is used to display the not found page
 export default function NotFound() {
   const imageStyle = {
     display:"flex",
