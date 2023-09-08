@@ -22,6 +22,7 @@ interface IRating{
   overallScore: number;
 } //interface for rating
 
+//interface for post to be used in the post model
 interface IPost {
   description: string;
   pictureURL: string;
