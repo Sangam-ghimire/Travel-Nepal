@@ -47,6 +47,7 @@ export default function SignUpForm() {
     console.log("signing up");
 
     try {
+      //here we are making a post request to the api
       const { data } = await axios.post("/api/sign_up", {
         email,
         password,
@@ -57,6 +58,7 @@ export default function SignUpForm() {
 
       console.log(data);
 
+      //here we are alerting the user that the verification email has been sent to the user
       alert(`Verification email sent to: ${ email }`)
 
       resetStates(); //this is used to reset the states after the user has signed up
