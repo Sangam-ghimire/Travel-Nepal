@@ -40,6 +40,7 @@ function VerifyMail() {
         <div className={verifystyles.wrapper}>
             <Image className={verifystyles.img} src="/ncpr.jpg" alt="backgroundImage" fill  />
         <form className={verifystyles.verifiedBox}>
+        //here we are displaying the verify page
         <GoVerified className={verifystyles.icon}/>
             <h1>Verify Your Email Address !!</h1>
             <h2>Thank you for signing up with Trek Diaries!</h2>
